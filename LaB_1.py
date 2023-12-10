@@ -23,6 +23,8 @@ else:
 
  # Zadanie 3
 
+
+
 print("Kalkulator")
 
 x = int(input("Podaj pierwszą liczbę:"))
@@ -35,11 +37,23 @@ print("1. Dodawanie")
 print("2. Odejmowanie")
 print("3. Mnożenie")
 print("4. Dzielenie")
+print("5. Potęgowanie")
 
-z = int(input("Podaj numer operacji:"))
+z=int(input("Podaj numer operacji od 1 do 5:"))
+print("operacja nr:",z)
 
-if
-
+if z == 1:
+    print("Suma x+y=",x+y)
+elif z == 2:
+    print("Różnica x-y=", x-y)
+elif z == 3:
+    print("Iloczyn x*y=",x*y)
+elif z == 4:
+    print("Iloraz x/y=",x/y)
+elif z == 5:
+    print("Potęgowanie x^y=", x ^ y)
+else:
+    print("Spróbuj jeszcze raz")
 
 
 
