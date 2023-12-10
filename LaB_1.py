@@ -1,3 +1,4 @@
+# Cena biletu
 print("Zadanie 1. Cena biletu")
 
 x = int(input("Podaj swój wiek:"))
@@ -8,6 +9,8 @@ elif x <= 18:
     print("Cena biletu: 10zł")
 else:
     print("Cena biletu: 20zł")
+
+
 # Zadanie 2
 print("Zadanie 2.")
 
@@ -55,5 +58,28 @@ elif z == 5:
 else:
     print("Spróbuj jeszcze raz")
 
+# Równanie kwadratowe
+
+print("Równanie kwadratowe")
+from math import sqrt
+
+a = int(input("Podaj a:"))
+b = int(input("Podaj b:"))
+c = int(input("Podaj c:"))
+print(a,"*x^2+",b,"*x+",c,"=0")
+delta = b*b-4*a*c
 
 
+if delta < 0:
+    print("Brak rozwiązań")
+elif delta == 0:
+    print("x=", -b/2*a)
+else:
+    deltap = sqrt(delta)
+    print("x1 =", (-b-deltap/2*a))
+    print("x2 =", (-b+deltap/2*a))
+
+
+# Zadanie 5
+
+print("in progress...")
