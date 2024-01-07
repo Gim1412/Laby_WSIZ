@@ -54,7 +54,7 @@ elif z == 3:
 elif z == 4:
     print("Iloraz x/y=",x/y)
 elif z == 5:
-    print("Potęgowanie x^y=", x ^ y)
+    print("Potęgowanie x^y=", x ** y)
 else:
     print("Spróbuj jeszcze raz")
 
