@@ -49,3 +49,17 @@ while True:
         print("Podana liczba jest dodatnia")
 
 # Zad. 4
+print("Zadanie nr 4")
+x=int(input( "podaj pierwszą liczbę:"))
+y=int(input("podaj drugą liczbę:"))
+print("x=",x)
+print("y=",y)
+
+start = min(x, y)
+koniec = max(x, y)
+
+print(f"Liczby od {start} do {koniec} to:")
+for liczba in range(start, koniec + 1):
+    if liczba % 2 == 1:
+        continue
+    print(liczba)
