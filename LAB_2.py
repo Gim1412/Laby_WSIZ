@@ -63,3 +63,48 @@ for liczba in range(start, koniec + 1):
     if liczba % 2 == 1:
         continue
     print(liczba)
+
+# Ciąg 1
+
+print("Ciąg 1")
+for i in range(1, 101):
+    print(i, end=", ")
+
+# Ciąg 2
+
+print("Ciąg 2")
+for i in range(100, -1, -1):
+    print(i, end=", ")
+
+# Ciąg 3
+print("Ciąg 3")
+for i in range(7, 77, 7):
+    print(i, end=", ")
+
+# Ciąg 4
+
+print("Ciąg 4")
+for i in range(20, -1, -2):
+    print(i, end=", ")
+
+# Gwiazdki
+
+liczba_gwiazd = int(input("Podaj liczbę gwiazd: "))
+
+for i in range(liczba_gwiazd):
+    print("* " * liczba_gwiazd)
+
+# Choinka 1
+
+height = int(input("Wprowadź wysokość choinki"))
+for i in range(1, height + 1):
+        print('* ' * i)
+
+# Choinka 2
+
+height = int(input("Podaj liczbę całkowitą"))
+
+for i in range(1, height + 1):
+    spaces = ' ' * (height - i)
+    stars = '* ' * i
+    print(f"{spaces}{stars}")
