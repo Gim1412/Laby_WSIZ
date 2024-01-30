@@ -108,3 +108,58 @@ for i in range(1, height + 1):
     spaces = ' ' * (height - i)
     stars = '* ' * i
     print(f"{spaces}{stars}")
+
+# Ciąg arytmetyczny
+
+while True:
+    try:
+        n = int(input("Podaj liczbę naturalną: "))
+
+        if n > 0:
+            break
+        else:
+            print("Spróbuj ponownie.")
+    except ValueError:
+        print("Coś poszło nie tak.")
+print("Liczba naturalna:", n)
+
+a = int(input("Podaj liczę a"))
+r = int(input("Podaj liczę r"))
+
+print("n = ", n)
+print("a = ", a)
+print("r = ", r)
+print("Wyrazy ciągu")
+for x in range (n):
+    wyrazy = x + (n - 1) * r
+    print( wyrazy)
+
+# n!
+
+while True:
+    try:
+        n = int(input("Podaj liczbę naturalną: "))
+
+        if n > 0:
+            break
+        else:
+            print("Spróbuj ponownie.")
+    except ValueError:
+        print("Coś poszło nie tak.")
+print(" Liczba naturalna:", n)
+
+n = int(input("Podaj liczbę naturalną:"))
+
+
+def silnia(n):
+
+    wynik = 1
+    for x in range(1, n + 1):
+        wynik *= x
+
+    return wynik
+
+
+z = silnia(n)
+
+print("n!=", z)
