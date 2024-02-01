@@ -48,6 +48,24 @@ polowa2 = x2 // 2
 trzeci = tekst[:polowa1] + tekst2[polowa2:]
 print("Trzeci łańcuch:", trzeci)
 
+# Lista
+
+lista = ["Ewa", "Adam", "Ola", "Ula"]
+lista.sort()
+print(lista)
+lista.append("Ala")
+lista.append("Iga")
+print(lista)
+lista.pop()
+print(lista)
+lista.insert(2, "Andrzej")
+lista.reverse()
+print(lista)
+lista2=lista*2
+print(lista2)
+
+
+# Część druga
 
 
 
