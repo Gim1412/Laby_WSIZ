@@ -170,16 +170,108 @@ else:
 
 import random
 
+
 def utworz_zbior(rozmiar):
-    return set(random.uniform(0, 10) for _ in range(rozmiar))
+    return {random.randint(0, 10) for _ in range(rozmiar)}
 
 
 a = random.randint(3, 7)
+
 b = random.randint(3, 7)
 
+zbiór_X = utworz_zbior(a)
+zbiór_Y = utworz_zbior(b)
+print(f"Zbiór X ({a} elementów): {zbiór_X}")
+print(f"Zbiór Y ({b} elementów): {zbiór_Y}")
 
-zbiórX = utworz_zbior(a)
-zbiórY = utworz_zbior(b)
+# a
 
-print(f"Zbiór X ({a} elementów): {zbiórX}")
-print(f"Zbiór Y ({b} elementów): {zbiórY}")
+if 5 in zbiór_X:
+    print("Zbiór X zawiera liczbę 5.")
+else:
+    print("Zbiór X nie zawiera liczby 5.")
+
+# b
+
+if zbiór_X.issubset(zbiór_Y):
+    print("Zbiór X jest podzbiorem zbioru Y.")
+else:
+    print("Zbiór X nie jest podzbiorem zbioru Y.")
+
+# c
+
+if zbiór_Y.issubset(zbiór_X):
+    print("Zbiór Y jest podzbiorem zbioru X.")
+else:
+    print("Zbiór Y nie jest podzbiorem zbioru X.")
+
+# d
+
+if zbiór_X.issuperset(zbiór_Y):
+    print("Zbiór X jest nadzbiorem zbioru Y.")
+else:
+    print("Zbiór X nie jest nadzbiorem zbioru Y.")
+
+# e
+
+if zbiór_Y.issuperset(zbiór_X):
+    print("Zbiór Y jest nadzbiorem zbioru X.")
+else:
+    print("Zbiór Y nie jest nadzbiorem zbioru X.")
+
+# f
+
+suma= zbiór_X.union(zbiór_Y)
+print(f"Suma zbiorów X i Y: {suma}")
+
+# g
+
+roznica = zbiór_X.difference(zbiór_Y)
+
+print(f"Różnica zbiorów X i Y: {roznica}")
+
+# h
+
+roznica = zbiór_Y.difference(zbiór_X)
+
+print(f"Różnica zbiorów Y i X: {roznica}")
+
+# i
+
+iloczyn = zbiór_X.intersection(zbiór_Y)
+
+print(f"Iloczyn zbiorów X i Y: {iloczyn}")
+
+# j
+
+roznica_sym = zbiór_X.symmetric_difference(zbiór_Y)
+
+print(f"Różnica symetryczna zbiorów X i Y: {roznica_sym}")
+
+# k
+
+najwyzszy = max(max(zbiór_X), max(zbiór_Y))
+
+print(f"Najwyższy element obu zbiorów: {najwyzszy}")
+
+# l
+
+pierwszyX = zbiór_X.pop()
+
+zbiór_Y.add(pierwszyX)
+
+print(f"Nowy zbiór Y({len(zbiór_Y)} elementów): {zbiór_Y}")
+
+# m
+
+zbiór_Y.update(zbiór_X)
+
+print(f"Zbiór Y po skopiowaniu ({len(zbiór_Y)} elementów): {zbiór_Y}")
+
+# n
+
+zbiór_X.clear()
+zbiór_Y.clear()
+
+print(f"Zbiór X wyczyszczony({len(zbiór_X)} elementów): {zbiór_X}")
+print(f"Zbiór Y wyczyszczony ({len(zbiór_Y)} elementów): {zbiór_Y}")
