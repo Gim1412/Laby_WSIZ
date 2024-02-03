@@ -1,13 +1,13 @@
 # Laboratorium 3
 
-# Zadanie 1
+# Zadanie 1.1
 
 tekst = "Rzeszów jest piękny"
 
 print(tekst[0])
 print(tekst[6], tekst[9], tekst[12],tekst[1])
 
-# Zadanie 2
+# Zadanie 1.2
 
 tekst = "Python jest super"
 
@@ -67,8 +67,58 @@ print(lista2)
 
 # Część druga
 
+# Zadanie 2.1
+
+import random
+
+x = int(input("Liczba ciągów: "))
+n = int(input("Liczba elementów: "))
+
+lista_ciagow = []
+for i in range(n):
+
+    dlugosc = random.randint(1, x)
 
 
+    ciag = ''.join(random.choice('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ') for _ in range(dlugosc))
+
+
+    lista_ciagow.append(ciag)
+
+
+print("Utworzone ciągi:", lista_ciagow)
+
+# ilość znaków
+ilosc_znakow = 0
+for ciag in lista_ciagow:
+    ilosc_znakow += len(ciag)
+print("Ilość znaków:",ilosc_znakow)
+
+# Litera k
+
+ilosc_k = 0
+
+for ciag in lista_ciagow:
+    ilosc_k += ciag.count('k')
+
+print("Liczba wystąpień litery k:", ilosc_k)
+
+# Wystąpienia "kt"
+
+ilosc_kt = 0
+for ciag in lista_ciagow:
+    ilosc_kt += ciag.count('kt')
+print("Ilość wystąpień kt", ilosc_kt)
+
+# Ciągi dłuższe od s
+s = int(input("Podaj liczbę s:"))
+dlugie = 0
+for ciag in lista_ciagow:
+    if len(ciag) > s:
+        dlugie += 1
+print("Ilość ciągów dłuższych od s:", dlugie)
+
+# Zadanie 2.1
 
 
 
