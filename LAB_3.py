@@ -275,3 +275,5 @@ zbiór_Y.clear()
 
 print(f"Zbiór X wyczyszczony({len(zbiór_X)} elementów): {zbiór_X}")
 print(f"Zbiór Y wyczyszczony ({len(zbiór_Y)} elementów): {zbiór_Y}")
+
+#koniec
